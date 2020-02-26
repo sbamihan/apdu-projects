@@ -27,4 +27,9 @@ class MainController {
 	public String hello(@RequestParam String name) {
 		return "Hello " + name + "!";
 	}
+	
+	@GetMapping("/hi")
+	public String hi() {
+		return "Hi!";
+	}
 }
