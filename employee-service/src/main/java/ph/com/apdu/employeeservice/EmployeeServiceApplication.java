@@ -38,12 +38,12 @@ class SampleDataCLR implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 		Collection<Employee> employees = new ArrayList<>();
-		employees.add(new Employee("Sherwin", "Amihan", "Male", 34, 14.224, 163.142));
-		employees.add(new Employee("Evelyn", "Amihan", "Female", 34, 13.97, 132.277));
-		employees.add(new Employee("Dianna Claire Marie", "Amihan", "Female", 13, 13.208, 114.64));
-		employees.add(new Employee("Elijah Raye Vel", "Amihan", "Male", 10, 12.192, 108.027));
-		employees.add(new Employee("Brandon Boyd", "Amihan", "Male", 9, 12.446, 110.231));
-		employees.add(new Employee("Tabebe", "Stuffed Toy", "Male", 10, 2.54, 2.20462));
+		employees.add(new Employee("Sherwin", "Amihan", "Male", 34, 14.22, 163.14));
+		employees.add(new Employee("Evelyn", "Amihan", "Female", 34, 13.97, 132.27));
+		employees.add(new Employee("Dianna Claire Marie", "Amihan", "Female", 13, 13.20, 114.64));
+		employees.add(new Employee("Elijah Raye Vel", "Amihan", "Male", 10, 12.19, 108.02));
+		employees.add(new Employee("Brandon Boyd", "Amihan", "Male", 9, 12.44, 110.23));
+		employees.add(new Employee("Tabebe", "Stuffed Toy", "Male", 10, 2.54, 12.20));
 
 		employees.stream().forEach(e -> employeeRepository.save(e));
 		employeeRepository.findAll().forEach(System.out::println);

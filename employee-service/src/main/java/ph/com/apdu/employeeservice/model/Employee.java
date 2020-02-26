@@ -22,6 +22,7 @@ public class Employee {
 	}
 
 	public Employee(String firstName, String lastName, String gender, int age, double height, double weight) {
+		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
