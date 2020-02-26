@@ -15,17 +15,18 @@ public class Employee {
 	private String lastName;
 	private String gender;
 	private int age;
+	private double height;
 
 	public Employee() {
-		super();
 	}
 
-	public Employee(String firstName, String lastName, String gender, int age) {
+	public Employee(String firstName, String lastName, String gender, int age, double height) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
 		this.age = age;
+		this.height = height;
 	}
 
 	public Long getId() {
@@ -68,10 +69,18 @@ public class Employee {
 		this.age = age;
 	}
 
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender
-				+ ", age=" + age + "]";
+				+ ", age=" + age + ", height=" + height + "]";
 	}
 
 }
