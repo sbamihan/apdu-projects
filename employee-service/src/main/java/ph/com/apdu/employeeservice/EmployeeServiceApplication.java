@@ -51,12 +51,3 @@ class SampleDataCLR implements CommandLineRunner {
 		employeeRepository.findAll().forEach(System.out::println);
 	}
 }
-
-@RestController
-class MainController {
-
-	@GetMapping
-	public String welcome() {
-		return "Welcome!";
-	}
-}
