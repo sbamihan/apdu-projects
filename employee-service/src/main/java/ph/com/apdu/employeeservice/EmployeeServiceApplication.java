@@ -43,7 +43,7 @@ class SampleDataCLR implements CommandLineRunner {
 		employees.add(new Employee("Dianna Claire Marie", "Amihan", "Female", 13, 13.20, 114.64));
 		employees.add(new Employee("Elijah Raye Vel", "Amihan", "Male", 10, 12.19, 108.02));
 		employees.add(new Employee("Brandon Boyd", "Amihan", "Male", 9, 12.44, 110.23));
-		employees.add(new Employee("Tabebe", "Stuffed Toy", "Male", 10, 2.54, 2.20));
+		employees.add(new Employee("Tabebe", "Stuffed Toy", "Male", 10, 2.54, 12.20));
 
 		employees.stream().forEach(e -> employeeRepository.save(e));
 		employeeRepository.findAll().forEach(System.out::println);
