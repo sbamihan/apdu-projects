@@ -23,9 +23,4 @@ class MainController {
 		return "Welcome!";
 	}
 
-	@GetMapping("/hello")
-	public String hello(@RequestParam String name) {
-		return "Hello " + name + "!";
-	}
-
 }
