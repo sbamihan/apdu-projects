@@ -32,4 +32,9 @@ class MainController {
 	public String hi() {
 		return "Hi!";
 	}
+	
+	@GetMapping("/fuck")
+	public String fuck() {
+		return "Fuck you!";
+	}
 }
