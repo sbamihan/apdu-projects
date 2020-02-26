@@ -17,8 +17,8 @@ import ph.com.apdu.employeeservice.model.EmployeeRepository;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-//@EnableSwagger2
-//@Import({ springfox.documentation.spring.data.rest.configuration.SpringDataRestConfiguration.class })
+@EnableSwagger2
+@Import({ springfox.documentation.spring.data.rest.configuration.SpringDataRestConfiguration.class })
 public class EmployeeServiceApplication {
 
 	public static void main(String[] args) {
