@@ -1,32 +1,56 @@
 package ph.com.apdu.employeeservice.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
+@Table(name = "employee")
 public class Employee {
 
 	@Id
 	@GeneratedValue
+	@NotNull
+	@Column(name = "id")
 	private Long id;
 
+	@Column(name = "first_name")
 	private String firstName;
+
+	@Column(name = "last_name")
 	private String lastName;
+
+	@Column(name = "gender")
 	private String gender;
+
+	@Column(name = "age")
 	private int age;
+
+	@Column(name = "height")
 	private double height;
+
+	@Column(name = "weight")
+	private double weight;
+
+	@Column(name = "email")
+	private String email;
 
 	public Employee() {
 	}
 
-	public Employee(String firstName, String lastName, String gender, int age, double height) {
+	public Employee(String firstName, String lastName, String gender, int age, double height, double weight,
+			String email) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
 		this.age = age;
 		this.height = height;
+		this.weight = weight;
+		this.email = email;
 	}
 
 	public Long getId() {
@@ -77,14 +101,26 @@ public class Employee {
 		this.height = height;
 	}
 
-	public String getFullName() {
-		return this.firstName.trim() + " " + this.lastName.trim();
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender
-				+ ", age=" + age + ", height=" + height + "]";
+				+ ", age=" + age + ", height=" + height + ", weight=" + weight + ", email=" + email + "]";
 	}
 
 }
