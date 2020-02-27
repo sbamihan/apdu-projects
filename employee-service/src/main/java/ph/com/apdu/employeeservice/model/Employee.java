@@ -16,17 +16,19 @@ public class Employee {
 	private String gender;
 	private int age;
 	private double height;
+	private double weight;
 
 	public Employee() {
 	}
 
-	public Employee(String firstName, String lastName, String gender, int age, double height) {
+	public Employee(String firstName, String lastName, String gender, int age, double height, double weight) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
 		this.age = age;
 		this.height = height;
+		this.weight = weight;
 	}
 
 	public Long getId() {
@@ -53,6 +55,10 @@ public class Employee {
 		this.lastName = lastName;
 	}
 
+	public String getFullName() {
+		return this.firstName.trim() + " " + this.lastName.trim();
+	}
+
 	public String getGender() {
 		return gender;
 	}
@@ -77,14 +83,18 @@ public class Employee {
 		this.height = height;
 	}
 
-	public String getFullName() {
-		return this.firstName.trim() + " " + this.lastName.trim();
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
 	}
 
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender
-				+ ", age=" + age + ", height=" + height + "]";
+				+ ", age=" + age + ", height=" + height + ", weight=" + weight + "]";
 	}
 
 }

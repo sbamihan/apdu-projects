@@ -38,12 +38,12 @@ class SampleDataCLR implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 		Collection<Employee> employees = new ArrayList<>();
-		employees.add(new Employee("Sherwin", "Amihan", "Male", 34, 14.22));
-		employees.add(new Employee("Evelyn", "Amihan", "Female", 34, 13.97));
-		employees.add(new Employee("Dianna Claire Marie", "Amihan", "Female", 13, 13.20));
-		employees.add(new Employee("Elijah Raye Vel", "Amihan", "Male", 10, 12.19));
-		employees.add(new Employee("Brandon Boyd", "Amihan", "Male", 9, 12.44));
-		employees.add(new Employee("Tabebe", "Stuffed Toy", "Male", 10, 2.54));
+		employees.add(new Employee("Sherwin", "Amihan", "Male", 34, 14.22, 163.142));
+		employees.add(new Employee("Evelyn", "Amihan", "Female", 34, 13.97, 132.277));
+		employees.add(new Employee("Dianna Claire Marie", "Amihan", "Female", 13, 13.20, 121.254));
+		employees.add(new Employee("Elijah Raye Vel", "Amihan", "Male", 10, 12.19, 108.027));
+		employees.add(new Employee("Brandon Boyd", "Amihan", "Male", 9, 12.44, 110.231));
+		employees.add(new Employee("Tabebe", "Stuffed Toy", "Male", 10, 2.54, 2.204));
 
 		employees.stream().forEach(e -> employeeRepository.save(e));
 		employeeRepository.findAll().forEach(System.out::println);
