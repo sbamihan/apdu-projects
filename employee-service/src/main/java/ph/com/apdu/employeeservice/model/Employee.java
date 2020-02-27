@@ -17,11 +17,13 @@ public class Employee {
 	private int age;
 	private double height;
 	private double weight;
+	private String email;
 
 	public Employee() {
 	}
 
-	public Employee(String firstName, String lastName, String gender, int age, double height, double weight) {
+	public Employee(String firstName, String lastName, String gender, int age, double height, double weight,
+			String email) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -29,6 +31,7 @@ public class Employee {
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
+		this.email = email;
 	}
 
 	public Long getId() {
@@ -53,10 +56,6 @@ public class Employee {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public String getFullName() {
-		return this.firstName.trim() + " " + this.lastName.trim();
 	}
 
 	public String getGender() {
@@ -91,10 +90,18 @@ public class Employee {
 		this.weight = weight;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender
-				+ ", age=" + age + ", height=" + height + ", weight=" + weight + "]";
+				+ ", age=" + age + ", height=" + height + ", weight=" + weight + ", email=" + email + "]";
 	}
 
 }
