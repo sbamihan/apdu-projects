@@ -12,7 +12,6 @@ pipeline {
         sh '''echo "Building the server code..."
 mvn -version
 '''
-        stash(name: 'server', includes: '**/*.war')
       }
     }
 
