@@ -1,17 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Server') {
-      agent {
-        docker {
-          image 'maven:3.6.3'
-        }
-
-      }
+    stage('') {
       steps {
-        sh '''echo "Building the server code..."
-mvn -version
-'''
+        sh 'echo "Hello World"'
       }
     }
 
