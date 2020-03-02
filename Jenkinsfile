@@ -4,7 +4,7 @@ pipeline {
     stage('Server') {
       agent {
         docker {
-          image 'maven:3.5-jdk-8-slim'
+          image 'maven:3.6.3'
         }
 
       }
