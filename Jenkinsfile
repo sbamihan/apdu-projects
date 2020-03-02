@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh '''echo "Building the server code..."
 mvn -version
-mvn clean install'''
+mvn -B -DskipTests clean package'''
         stash(name: 'server', includes: '**/*.war')
       }
     }
