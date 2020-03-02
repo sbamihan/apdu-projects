@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        bat 'echo "Hello World"'
+        sh 'echo "Building the server code..."'
       }
     }
 
